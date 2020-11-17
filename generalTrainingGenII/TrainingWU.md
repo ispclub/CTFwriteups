@@ -1,6 +1,6 @@
 # WU CTF CHO CÁC THÀNH VIÊN TRAINING KHÔNG ĐI QUÂN SỰ
-# Sudoku  
-## Source code:
+## 1. Sudoku  
+[Source code](/generalTraining/blob/main/ctf/sudoku.cpp):
 ```
 int main()
 {
@@ -47,25 +47,31 @@ int main()
 ```
 Đây là một bài code C++. Đọc code ta thấy có 3 flag đúng form “ispclub{this_is_flag}” và 1 "abcdefg{xxxxxxxxxxxxxxxxxxxxxxxxx}", mà chiều dài xâu “abcdefg” lại bằng đúng chiều dài “ispclub”. Vậy liệu đây có phải flag thật không? Ta chạy thử code xem ra gì nhé.  
 ```
-	ispclub{d0_y0u_l1k3_5ud0ku?} 			|		ispclub{d0_y0u_l1k3_5ud0ku?}
-	(Y or N)? ====> Answer: Y			|		(Y or N)? ====> Answer: N
-							|
-	ispclub{l3t'5_try_4_puzzl3!}			|		ispclub{y0u_d0_n0t_g3t_th3_fl4g}
-							|
-	--------------------------			|
-	| 7 0 0 | 6 0 0 | 2 0 3 |			|
-	| 0 2 0 | 8 1 0 | 0 5 0 |			|
-	| 0 0 5 | 0 9 2 | 0 0 0 |			|
-	--------------------------			|
-	| 2 0 0 | 0 7 0 | 5 0 8 |			|
-	| 3 0 7 | 0 0 9 | 0 2 0 |			|
-	| 0 9 0 | 0 4 0 | 0 0 7 |			|
-	--------------------------			|
-	| 1 0 8 | 0 3 7 | 0 0 2 |			|
-	| 0 0 0 | 1 0 0 | 8 0 0 |			|
-	| 6 0 2 | 0 0 0 | 9 3 0 |			|
-	--------------------------			|
-	Try again					|
+	C:\ISP\source-code\TrainingGII\Sudoku.exe
+	ispclub{d0_y0u_l1k3_5ud0ku?} 
+	(Y or N)? ====> Answer: Y
+	
+	ispclub{l3t'5_try_4_puzzl3!}
+							
+	--------------------------
+	| 7 0 0 | 6 0 0 | 2 0 3 |
+	| 0 2 0 | 8 1 0 | 0 5 0 |
+	| 0 0 5 | 0 9 2 | 0 0 0 |
+	--------------------------
+	| 2 0 0 | 0 7 0 | 5 0 8 |
+	| 3 0 7 | 0 0 9 | 0 2 0 |
+	| 0 9 0 | 0 4 0 | 0 0 7 |
+	--------------------------
+	| 1 0 8 | 0 3 7 | 0 0 2 |
+	| 0 0 0 | 1 0 0 | 8 0 0 |
+	| 6 0 2 | 0 0 0 | 9 3 0 |
+	--------------------------
+	Try again
+	C:\ISP\source-code\TrainingGII\Sudoku.exe
+	ispclub{d0_y0u_l1k3_5ud0ku?}
+	(Y or N)? ====> Answer: N
+	
+	ispclub{y0u_d0_n0t_g3t_th3_fl4g}
 ```
 Ta thấy 3 flag đầu là flag giả. ta thấy 1 ma trận 9x9 số, quay về đọc code xem ta có gì:  
 
@@ -119,6 +125,7 @@ Sau khi chạy tool mình nhận được string sudoku solved: `hbjgfecidecg
 
 Sau đó thay chuỗi *sudoku="hbjgfecidecgibdhfjidfhjcebgcgedhbfjidihfgjbcefjbceidghbfijdhgecjedbcgihfghceifjdb"* vào source code challenge ban đầu và chạy lại:  
 ```
+	C:\ISP\source-code\TrainingGII\Sudoku.exe
 	ispclub{d0_y0u_l1k3_5ud0ku?}
 	(Y or N)? ====> Answer: Y
 
